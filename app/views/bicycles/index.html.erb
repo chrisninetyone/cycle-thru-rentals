@@ -1,0 +1,10 @@
+<h1>Bicycles#index</h1>
+<% @bicycles.each do |bicycle| %>
+<ul>
+    <li><%= "Brand: #{bicycle.brand}" %></li>
+    <li><%= "Category: #{bicycle.category}" %></li>
+    <li><%= "Description: #{bicycle.description}" %></li>
+    <li><%= "Address(zip): #{bicycle.address}" %></li>
+    <li><%= "Price $#{bicycle.price_per_day}" %></li>
+</ul>
+<% end %>

@@ -4,7 +4,7 @@ class CreateBicycles < ActiveRecord::Migration[5.2]
       t.string :description
       t.string :address
       t.integer :price_per_day
-      t.string :type
+      t.string :category
       t.string :brand
       t.references :user, foreign_key: true
 
