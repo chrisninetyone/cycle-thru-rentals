@@ -3,10 +3,15 @@
 z-index: 2;
 }
 
-.btn btn-primary btn-rounded{
-  margin-left: 60px;
+.btn btn-primary{
+  margin: 60px
 }
 
 .carousel{
   height:100%;
 }
+
+.outer d-flex{
+  overflow:hidden;
+}
+
