@@ -5,4 +5,5 @@ class Booking < ApplicationRecord
   def confirm!
     @confirm = true
   end
+
 end

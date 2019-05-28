@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+
   before_action :set_bookings, only: [:show, :confirm_booking]
 
   def show
@@ -8,7 +9,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.bicycle = Bicycle.find(params[:bicycle_id])
     @booking.user = current_user
-    if @booking.bicycle.user != @booking.user
+    if check_user?
       @booking.save
       redirect_to @booking
     else
@@ -31,5 +32,10 @@ class BookingsController < ApplicationController
 
   def set_bookings
     @booking = Booking.find(params[:id])
+  end
+
+  def check_user?
+    @bicycle = Bicycle.find(params[:bicycle_id])
+    @bicycle.user_id != current_user.id
   end
 end
