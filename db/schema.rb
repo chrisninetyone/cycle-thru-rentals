@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2019_05_28_045219) do
     t.string "description"
     t.string "address"
     t.integer "price_per_day"
-    t.string "category"
+    t.string "type"
     t.string "brand"
     t.bigint "user_id"
     t.datetime "created_at", null: false

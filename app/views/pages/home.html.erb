@@ -1,17 +1,25 @@
+<div class="outer d-flex justify-content-center p-10">
 
-<%= render 'shared/navbar' %>
+<div class="card">
+  <div class="card-body">
+   <div>
+   <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+   </div>
+   <div>
+    <%= f.input :address, input_html: {value: ""} %>
+  </div>
+  <div>
+    <%= f.input :begin_date, as: :date, html5: true %>
+    <%= f.input :end_date, as: :date, html5: true %>
+    <%= f.submit "Search", class: "btn btn-primary btn-rounded" %>
+    <% end %>
 
-
-
+  </div>
+  </div>
+</div>
 
   <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <div class="carousel-inner">
-    <%= simple_form_for :search, url: root_path, method: "GET", html: { class: 'form-inline' } do |f| %>
-  <%= f.input :address, input_html: {value: ""} %>
-  <%= f.input :begin_date, as: :date %>
-  <%= f.input :end_date, as: :date %>
-  <%= f.submit "Search", class: "btn btn-primary" %>
-  <% end %>
     <div class="carousel-item active">
       <img class="d-block w-100" src="https://images.pexels.com/photos/1149601/pexels-photo-1149601.jpeg?cs=srgb&dl=bicycle-blue-bricks-1149601.jpg&fm=jpg"
         alt="First slide">
@@ -36,3 +44,4 @@ https://images.pexels.com/photos/1580234/pexels-photo-1580234.jpeg?cs=srgb&dl=ac
   </a>
 
 
+</div>
