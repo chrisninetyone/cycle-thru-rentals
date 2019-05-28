@@ -8,8 +8,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.bicycle = Bicycle.find(params[:bicycle_id])
     @booking.user = current_user
-    @booking.save
-    redirect_to @booking
+    if @booking.bicycle.user != @booking.user
+      @booking.save
+      redirect_to @booking
+    else
+      render 'bicycles/show'
+    end
   end
 
   def index
