@@ -1,2 +1,13 @@
-<h1>Bicycles#show</h1>
-<p>Find me in app/views/bicycles/show.html.erb</p>
+<div class="container mt-4">
+  <h1><%= @bicycle.brand %></h1>
+  <p><%= "Category: #{@bicycle.category}" %></p>
+  <p><%= "Addres: #{@bicycle.address}" %></p>
+  <p><%= "$#{@bicycle.price_per_day}/day" %></p>
+</div>
+
+
+<%= simple_form_for [@bicycle, @booking] do |f| %>
+  <%= f.association :start_date %>
+  <%= f.association :end_date %>
+  <%= f.submit %>
+<% end %>
