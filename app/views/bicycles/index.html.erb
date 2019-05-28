@@ -1,11 +1,11 @@
 <h1>Bicycles#index</h1>
 <% @bicycles.each do |bicycle| %>
-<ul>
-    <li><%= "Brand: #{bicycle.brand}" %></li>
-    <li><%= "Category: #{bicycle.category}" %></li>
-    <li><%= "Description: #{bicycle.description}" %></li>
-    <li><%= "Address(zip): #{bicycle.address}" %></li>
-    <li><%= "Price $#{bicycle.price_per_day}" %></li>
-    <li><%= link_to 'Show', bicycle_path(bicycle) %></li>
-</ul>
+  <ul>
+      <li><%= "Brand: #{bicycle.brand}" %></li>
+      <li><%= "Category: #{bicycle.category}" %></li>
+      <li><%= "Description: #{bicycle.description}" %></li>
+      <li><%= "Address(zip): #{bicycle.address}" %></li>
+      <li><%= "Price $#{bicycle.price_per_day}" %></li>
+      <li><%= link_to 'Show', bicycle_path(bicycle) %></li>
+  </ul>
 <% end %>
