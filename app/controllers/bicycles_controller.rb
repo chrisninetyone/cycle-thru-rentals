@@ -1,4 +1,6 @@
 class BicyclesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index]
+
   def index
     @bicycles = Bicycle.all
   end
