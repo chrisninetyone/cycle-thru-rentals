@@ -3,10 +3,26 @@
 z-index: 2;
 }
 
-.btn btn-primary btn-rounded{
-  margin-left: 60px;
+.carousel{
+  height: 100vh;
+  top: 0;
+  background-position: center;
+  overflow:hidden;
+  background-size: cover;
+
 }
 
-.carousel{
-  height:100%;
+// .btn-primary{
+// margin-left: 60px;
+// }
+
+.btn-block{
+  margin-top: 30px;
+  background-color: blue;
 }
+
+
+
+
+
+
