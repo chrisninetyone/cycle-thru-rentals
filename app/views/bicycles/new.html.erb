@@ -1,2 +1,12 @@
-<h1>Bicycles#new</h1>
-<p>Find me in app/views/bicycles/new.html.erb</p>
+<div class="container">
+
+  <h1>Post your Bicycle</h1>
+  <%= simple_form_for [@bicycle] do |f| %>
+    <%= f.input :brand %>
+    <%= f.input :category %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.input :description %>
+    <%= f.submit "Post Bike", class: "btn btn-primary" %>
+  <% end %>
+</div>
