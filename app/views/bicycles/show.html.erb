@@ -1,2 +1,15 @@
-<h1><%= @bicycle.brand %> <%= @bicycle.category %> bike: <%= @bicycle.description %></h1>
-<p><%= cl_image_tag @bicycle.photo, height: 300, width: 400, crop: :fill %></p>
+
+<div class="container mt-4">
+  <h1><%= @bicycle.brand %></h1>
+  <p><%= "Category: #{@bicycle.category}" %></p>
+  <p><%= "Addres: #{@bicycle.address}" %></p>
+  <p><%= "$#{@bicycle.price_per_day}/day" %></p>
+  <%= cl_image_tag @bicycle.photo, height: 300, width: 400, crop: :fill %>
+</div>
+
+
+<%= simple_form_for [@bicycle, @booking] do |f| %>
+  <%= f.association :start_date %>
+  <%= f.association :end_date %>
+  <%= f.submit %>
+<% end %>
