@@ -1,4 +1,4 @@
-<h1>Bicycles#index</h1>
+<h1>Bicycles</h1>
 <% @bicycles.each do |bicycle| %>
 <ul>
     <li><%= "Brand: #{bicycle.brand}" %></li>
@@ -9,3 +9,5 @@
     <li><%= link_to 'Show', bicycle_path(bicycle) %></li>
 </ul>
 <% end %>
+
+<%= link_to 'Home', root_path  %>

@@ -1,5 +1,5 @@
 class BicyclesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @bicycles = Bicycle.all
@@ -16,6 +16,7 @@ class BicyclesController < ApplicationController
 
   def create
     @bicycle = Bicycle.new(bicycle_params)
+    @bicycle.user_id = current_user.id
     if @bicycle.save
       redirect_to bicycle_path(@bicycle)
     else
@@ -35,6 +36,6 @@ class BicyclesController < ApplicationController
   private
 
   def bicycle_params
-    params.require(:bicycle).permit(:description, :address, :price_per_day, :type, :brand, :photo)
+    params.require(:bicycle).permit(:description, :address, :price_per_day, :category, :brand, :photo)
   end
 end
