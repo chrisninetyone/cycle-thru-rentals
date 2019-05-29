@@ -1,13 +1,25 @@
+<div class="container">
 <h1>Bicycles</h1>
-<% @bicycles.each do |bicycle| %>
-<ul>
-    <li><%= "Brand: #{bicycle.brand}" %></li>
-    <li><%= "Category: #{bicycle.category}" %></li>
-    <li><%= "Description: #{bicycle.description}" %></li>
-    <li><%= "Address(zip): #{bicycle.address}" %></li>
-    <li><%= "Price $#{bicycle.price_per_day}" %></li>
-    <li><%= link_to 'Show', bicycle_path(bicycle) %></li>
-</ul>
-<% end %>
+  <div class="cards">
+  <% @bicycles.each do |bicycle| %>
+      <div class="card-category rounded">
+          <img class ="card-img-top" src="<%= bicycle.photo %>">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title"><%= "#{bicycle.brand}" %>
+            <small> - <%= "#{bicycle.category}" %> Bike</small></%>
+          </h5>
+          <div class="card-text">
+            <p><%= "#{bicycle.description}" %></p>
+            <p><%= "Address: #{bicycle.address}" %></p>
+            <p><%= "$#{bicycle.price_per_day}/day" %></p>
+            <%= link_to 'Book', bicycle_path(bicycle) %>
+          </div>
+        </div>
+      </div>
+  <% end %>
+  </div>
+</div>
 
-<%= link_to 'Home', root_path  %>
+<%#= link_to 'Home', root_path  %>
+<%#= cl_image_tag(bicycle.photo) %>
