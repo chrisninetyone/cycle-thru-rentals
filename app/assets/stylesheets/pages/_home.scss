@@ -3,18 +3,19 @@
 z-index: 2;
 }
 
-.carousel{
-  height: 100vh;
-  top: 0;
-  background-position: center;
-  overflow:hidden;
-  background-size: cover;
+.btn-outline-warning{
 
 }
 
-// .btn-primary{
-// margin-left: 60px;
-// }
+.carousel-item {
+  // height: 100vh;
+  // background-position: center;
+  // overflow:hidden;
+  // background-size: cover;
+  img {
+    height: 100vh;
+  }
+}
 
 .btn-block{
   margin-top: 30px;
