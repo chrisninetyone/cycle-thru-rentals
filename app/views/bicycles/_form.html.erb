@@ -1,0 +1,11 @@
+  <%= simple_form_for [@bicycle] do |f| %>
+
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.input :brand %>
+    <%= f.input :category, collection: ['Road', 'Mountain', 'Touring', 'Fixie', 'Commuter', 'BMX'] %>
+    <%= f.input :price_per_day %>
+    <%= f.input :address %>
+    <%= f.input :description %>
+    <%= f.submit "Post Bike", class: "btn btn-primary" %>
+  <% end %>
