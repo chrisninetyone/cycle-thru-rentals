@@ -6,6 +6,7 @@
       <p><%= "Category: #{@bicycle.category}" %></p>
       <p><%= "Address: #{@bicycle.address}" %></p>
       <p><%= "$#{@bicycle.price_per_day}/day" %></p>
+      <p><%=  %></p>
     </div>
     <div class="column">
       <%= cl_image_tag @bicycle.photo, height: 300, width: 400, crop: :fill %>
