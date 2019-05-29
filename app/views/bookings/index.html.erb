@@ -1,22 +1,40 @@
 
 <div class="container bg-white w-50 p-3 my-3">
   <h1>Your Bikes</h1>
-  <div class="row">
+  <p>Current Bookings</p>
 
+  <div class="row py-2">
   <% @bookings.each do |booking| %>
-    <div class="column">
-      <%= cl_image_tag booking.bicycle.photo, height: 300, width: 400, crop: :fill %>
-    </div>
-    <div class="column border p-5">
-      <p><%= booking.user.email %></p>
-      <p><%= booking.bicycle.brand %> <%= booking.bicycle.category %> Bike</p>
-      <p><%= (booking.end_date - booking.begin_date).to_i %> Days</p>
-      <p>Starting: <%= booking.begin_date %></p>
-      <p>Ending: <%= booking.end_date %></p>
-
-
-    </div>
-
+    <% if booking.user == current_user && (DateTime.now - booking.end_date).to_i < 0 %>
+      <div class="column mx-2">
+        <%= cl_image_tag booking.bicycle.photo, height: 300, width: 400, crop: :fill %>
+      </div>
+      <div class="column border p-5">
+        <p><%= booking.user.email %></p>
+        <p><%= booking.bicycle.brand %> <%= booking.bicycle.category %> Bike</p>
+        <p><%= (booking.end_date - booking.begin_date).to_i %> Days</p>
+        <p>Starting: <%= booking.begin_date %></p>
+        <p>Ending: <%= booking.end_date %></p>
+      </div>
+    <% end %>
   <% end %>
+  </div>
+
+  <p>Past Bookings</p>
+  <div class="row py-2">
+    <% @bookings.each do |booking| %>
+      <% if booking.user == current_user && (DateTime.now - booking.end_date).to_i > 0 %>
+        <div class="column mx-2">
+        <%= cl_image_tag booking.bicycle.photo, height: 300, width: 400, crop: :fill %>
+      </div>
+      <div class="column border p-5">
+        <p><%= booking.user.email %></p>
+        <p><%= booking.bicycle.brand %> <%= booking.bicycle.category %> Bike</p>
+        <p><%= (booking.end_date - booking.begin_date).to_i %> Days</p>
+        <p>Starting: <%= booking.begin_date %></p>
+        <p>Ending: <%= booking.end_date %></p>
+      </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
