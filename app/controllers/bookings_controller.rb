@@ -17,6 +17,7 @@ class BookingsController < ApplicationController
   end
 
   def index
+    @review = Review.new
     @bookings = Booking.all
   end
 

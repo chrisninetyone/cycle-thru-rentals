@@ -33,6 +33,13 @@
         <p><%= (booking.end_date - booking.begin_date).to_i %> Days</p>
         <p>Starting: <%= booking.begin_date %></p>
         <p>Ending: <%= booking.end_date %></p>
+        <div>
+          <%= simple_form_for [booking, @review] do |f| %>
+            <%= f.input :rating %>
+            <%= f.input :content %>
+            <%= f.submit %>
+          <% end %>
+        </div>
       </div>
       <% end %>
     <% end %>
