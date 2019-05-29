@@ -3,11 +3,13 @@ class BookingsController < ApplicationController
   before_action :set_bookings, only: [:show, :confirm_booking]
 
   def show
+    authorize @booking
   end
 
   def create
     @booking = Booking.new(booking_params)
     @booking.bicycle = Bicycle.find(params[:bicycle_id])
+    authorize @booking
     @booking.user = current_user
     if check_user?
       @booking.save
