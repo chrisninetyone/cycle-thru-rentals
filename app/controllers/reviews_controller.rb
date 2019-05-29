@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to bicycle_path(@review.booking.bicycle)
     else
-      alert('yooooo')
+      redirect_to bookings_path
     end
   end
 
