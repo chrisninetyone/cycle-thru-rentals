@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-
   before_action :set_bookings, only: [:show, :confirm_booking]
 
   def show
@@ -18,6 +17,8 @@ class BookingsController < ApplicationController
   end
 
   def index
+    @review = Review.new
+    @bookings = Booking.all
   end
 
   def confirm_booking
