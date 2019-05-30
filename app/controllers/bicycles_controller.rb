@@ -27,6 +27,7 @@ class BicyclesController < ApplicationController
   def show
     @review = Review.new
     @booking = Booking.new
+    @reviews = @bicycle.reviews
     authorize @bicycle
   end
 
