@@ -20,7 +20,6 @@ class BicyclesController < ApplicationController
         infoWindow: render_to_string(partial: "infowindow", locals: { bicycle: bicycle }),
         image_url: helpers.asset_url('CTlogo.png')
       }
-
     end
   end
 

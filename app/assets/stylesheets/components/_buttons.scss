@@ -37,5 +37,22 @@
 
 .btn-outline-secondary{
   padding: 6px 12px;
-  margin-left: 10px;
+  width: 100%;
+  &:hover {
+    background-color: #03CDAE;
+    transition: 0.8s;
+    border-color: #03CDAE;
+    color: #59289A;
+  }
+}
+
+.btn-outline-success{
+  border-color: #59289A;
+  color: #59289A;
+   &:hover {
+    background-color: #03CDAE;
+    transition: 0.8s;
+    border-color: #03CDAE;
+    color: #59289A;
+  }
 }
