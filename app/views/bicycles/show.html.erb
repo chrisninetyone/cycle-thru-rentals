@@ -8,10 +8,10 @@
       <p><%= "$#{@bicycle.price_per_day}/day" %></p>
       <p><%= @bicycle.description %></p>
     </div>
-    <div class="column">
+    <div class="column d-flex">
       <%= cl_image_tag @bicycle.photo, height: 300, width: 400, crop: :fill %>
     </div>
-    <div class="column">
+    <div class="column d-flex">
       <% if policy(Booking.new(bicycle: @bicycle)).create? %>
         <%= simple_form_for [@bicycle, @booking] do |f| %>
           <%= f.input :begin_date, html5: true %>
