@@ -1,0 +1,30 @@
+.login-btn {
+ margin-left: 17px;
+}
+
+.btn-info{
+  margin-left: 10px;
+  border-color: #59289A;
+    &:hover {
+    background-color: white;
+    border-color: #03CDAE;
+    transition: 0.8s;
+    color: #59289A;
+    }
+  }
+
+.btn-link {
+  color: #59289A;
+    &:hover {
+  border-bottom: solid 3px;
+  text-decoration: none;
+  color: #59289A;
+  transition: 0.4s;
+  padding-bottom: 5px;
+  }
+}
+
+.btn-outline-secondary{
+  padding: 6px 12px;
+  margin-left: 10px;
+}
