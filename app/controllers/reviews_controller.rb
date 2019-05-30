@@ -15,10 +15,6 @@ class ReviewsController < ApplicationController
   def update
   end
 
-  def index
-    @reviews = Review.all
-  end
-
   def destroy
   end
 
