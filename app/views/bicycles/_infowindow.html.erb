@@ -1,15 +1,11 @@
 <div class="card-category rounded">
-  <img class ="card-img-top" src="<%= bicycle.photo %>">
-  </a>
-  <div class="card-body">
-    <h5 class="card-title"><%= "#{bicycle.brand}" %>
-      <small> - <%= "#{bicycle.category}" %> Bike</small></%>
-    </h5>
-    <div class="card-text">
-      <p><%= "#{bicycle.description}" %></p>
-      <p><%= "Address: #{bicycle.address}" %></p>
-      <p><%= "$#{bicycle.price_per_day}/day" %></p>
-      <%= link_to 'Book', bicycle_path(bicycle) %>
+  <%= link_to bicycle_path(bicycle) do %>
+    <img class ="card-img-top-popup" src="<%= bicycle.photo %>">
+    <% end %>
+    <div class="card-body-popup">
+      <h5 class="card-title"><%= "#{bicycle.brand}" %>
+        <small> - <%= "#{bicycle.category}" %> Bike</small></%>
+      </h5>
     </div>
   </div>
 </div>
