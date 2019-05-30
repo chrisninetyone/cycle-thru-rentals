@@ -4,6 +4,16 @@ class BicyclesController < ApplicationController
 
   def index
     @bicycles = Bicycle.all
+
+    @bicycles = Bicycle.where.not(latitude: nil, longitude: nil)
+    @markers = @bicycles.map do |bicycle|
+      {
+        lat: bicycle.latitude,
+        lng: bicycle.longitude,
+        infoWindow: render_to_string(partial: "infowindow", locals: { bicycle: bicycle }),
+        image_url: helpers.asset_url('CTlogo.png')
+      }
+    end
   end
 
   def show
