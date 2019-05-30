@@ -31,12 +31,11 @@ const initMapbox = () => {
       .setPopup(popup)
       .addTo(map);
     });
+
   fitMapToMarkers(map, markers);
-  map.addControl(new MapboxGeocoder({
-    accessToken: mapboxgl.accessToken
-    // markers: false
-  }));
-  }
+   map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
+   }
+
 };
 
 

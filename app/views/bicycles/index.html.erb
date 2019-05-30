@@ -17,15 +17,18 @@
       <% else %>
         <% @bicycles.each do |bicycle| %>
           <div class="card-category rounded">
+        <%= link_to bicycle_path(bicycle) do %>
             <img class ="card-img-top" src="<%= bicycle.photo %>">
+            <% end %>
             <div class="card-body">
               <h5 class="card-title"><%= "#{bicycle.brand}" %>
-                <small> - <%= "#{bicycle.category}" %> Bike</small></%>
+                <small> - <%= "#{bicycle.category}" %></small></%>
               </h5>
               <div class="card-text">
-                <p><%= "#{bicycle.description}" %></p>
                 <p><%= "Address: #{bicycle.address}" %></p>
                 <p><%= "$#{bicycle.price_per_day}/day" %></p>
+              </div>
+              <div class="mt-auto">
                 <%= link_to 'Book Now', bicycle_path(bicycle), class: "btn btn-outline-secondary" %>
               </div>
             </div>
