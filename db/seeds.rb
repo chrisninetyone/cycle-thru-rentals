@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Bicycle.destroy_all
+
+15.times do
+  Bicycle.create(description: Faker::Quotes::Shakespeare.hamlet_quote,
+                 address: Faker::Address.zip_code,
+                 price_per_day: rand(8..30),
+                 category: ['Road', 'Mountain', 'Touring', 'Beach', 'Fix Gear'].sample,
+                 brand: ['Trek', 'Giant', 'Specialized', 'Surly', 'Cannondale', 'Ghose', 'Polygon', 'Schwinn', 'Fuji', 'BMX'].sample
+                 user_id: rand(1..10))
+end
