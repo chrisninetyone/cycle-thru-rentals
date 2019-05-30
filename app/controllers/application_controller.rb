@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :store_user_location!, if: :storable_location?
+  before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
   include Pundit
 
@@ -13,6 +14,11 @@ class ApplicationController < ActionController::Base
   # end
 
   private
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :avatar])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:name, :avatar])
+  end
 
   def storable_location?
     request.get? && is_navigational_format? && !devise_controller? && !request.xhr?
