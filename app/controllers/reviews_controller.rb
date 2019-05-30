@@ -1,7 +1,10 @@
 class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
-    @review.booking_id = current_user.id
+    @booking = Booking.find(params[:booking_id])
+    @review.booking = @booking
+    authorize @review
+
     if @review.save
       redirect_to bicycle_path(@review.booking.bicycle)
     else
