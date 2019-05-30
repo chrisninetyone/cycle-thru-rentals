@@ -5,9 +5,9 @@ class BicyclesController < ApplicationController
   def index
     if params[:query].present?
       @bicycles = Bicycle.where("address ILIKE ?", "%#{params[:query]}%")
-      @bicycles = Bicycle.where.not(latitude: nil, longitude: nil)
+      # @bicycles = Bicycle.where.not(latitude: nil, longitude: nil)
     else
-      
+
     @bicycles = Bicycle.all
 
     end
@@ -58,7 +58,7 @@ class BicyclesController < ApplicationController
 
     redirect_to bicycles_path
   end
-  
+
   def map_markers
     @markers = @bicycles.map do |bicycle|
       {
