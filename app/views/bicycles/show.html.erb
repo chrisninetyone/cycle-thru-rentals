@@ -6,7 +6,6 @@
       <p><%= "Category: #{@bicycle.category}" %></p>
       <p><%= "Address: #{@bicycle.address}" %></p>
       <p><%= "$#{@bicycle.price_per_day}/day" %></p>
-      <p><%= link_to "Reviews", booking_reviews_path(@bicycle) %></p>
     </div>
     <div class="column">
       <%= cl_image_tag @bicycle.photo, height: 300, width: 400, crop: :fill %>
@@ -31,10 +30,18 @@
   <% end %>
 </div>
 
-<div class="container bg-white my-5">
-  <p>Reviews</p>
-  <% @reviews.each do |review| %>
-    <%= review.rating %>
-    <%= review.content %>
-  <% end %>
-</div>
+<% if @reviews.exists? %>
+  <div class="container bg-white my-3 p-3">
+    <h1>Reviews</h1>
+    <% @reviews.each do |review| %>
+    <div class="border">
+      <% review.rating.to_i.times do %>
+        ⭐
+      <% end %>
+
+      --
+      <%= review.content %>
+    </div>
+    <% end %>
+  </div>
+<% end %>
