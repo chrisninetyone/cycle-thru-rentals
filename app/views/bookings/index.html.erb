@@ -15,6 +15,7 @@
         <p><%= (booking.end_date - booking.begin_date).to_i %> Days</p>
         <p>Starting: <%= booking.begin_date %></p>
         <p>Ending: <%= booking.end_date %></p>
+        <p>$<%= ((booking.end_date - booking.begin_date).to_i) * booking.bicycle.price_per_day %></p>
       </div>
     <% end %>
   <% end %>
