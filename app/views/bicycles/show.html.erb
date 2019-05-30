@@ -31,10 +31,18 @@
   <% end %>
 </div>
 
-<div class="container bg-white my-5">
-  <p>Reviews</p>
-  <% @reviews.each do |review| %>
-    <%= review.rating %>
-    <%= review.content %>
-  <% end %>
-</div>
+<% if @reviews.exists? %>
+  <div class="container bg-white my-3 p-3">
+    <h1>Reviews</h1>
+    <% @reviews.each do |review| %>
+    <div>
+      <% review.rating.to_i.times do %>
+        ⭐
+      <% end %>
+
+      --
+      <%= review.content %>
+    </div>
+    <% end %>
+  </div>
+<% end %>
