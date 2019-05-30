@@ -12,6 +12,7 @@ Bicycle.destroy_all
                  address: Faker::Address.zip_code,
                  price_per_day: rand(8..30),
                  category: ['Road', 'Mountain', 'Touring', 'Beach', 'Fix Gear'].sample,
-                 brand: ['Trek', 'Giant', 'Specialized', 'Surly', 'Cannondale', 'Ghose', 'Polygon', 'Schwinn', 'Fuji', 'BMX'].sample
-                 user_id: rand(1..10))
+                 brand: ['Trek', 'Giant', 'Specialized', 'Surly', 'Cannondale', 'Ghose', 'Polygon', 'Schwinn', 'Fuji', 'BMX'].sample,
+                 user_id: rand(1..10),
+                 photo: 'image/upload/v1559037199/iatrdn478lropqzsbp0y.jpg')
 end
