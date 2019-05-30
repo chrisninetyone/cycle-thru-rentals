@@ -30,3 +30,11 @@
   <%= link_to 'delete', bicycle_path(@bicycle), method: :delete, data: { confirm: "Are you sure you want to delete this bicycle?"}  %>
   <% end %>
 </div>
+
+<div class="container bg-white my-5">
+  <p>Reviews</p>
+  <% @reviews.each do |review| %>
+    <%= review.rating %>
+    <%= review.content %>
+  <% end %>
+</div>
