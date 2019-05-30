@@ -3,7 +3,11 @@ class BicyclesController < ApplicationController
   before_action :set_bicycle, only: [:edit, :destroy, :show, :update]
 
   def index
-    @bicycles = Bicycle.all
+    if params[:query].present?
+      @bicycles = Bicycle.where("address ILIKE ?", "%#{params[:query]}%")
+    else
+      @bicycles = Bicycle.all
+    end
   end
 
   def show

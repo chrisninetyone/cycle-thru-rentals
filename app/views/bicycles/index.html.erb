@@ -1,25 +1,40 @@
 <div class="container">
 <h1>Bicycles</h1>
+  <div>
+    <%= form_tag bicycles_path, method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a bicycle"
+      %>
+    <%= submit_tag("Search", class: 'btn btn-primary') %>
+    <% end %>
+  </div>
+
   <div class="cards">
-  <% @bicycles.each do |bicycle| %>
-      <div class="card-category rounded">
+    <% if @bicycles.length < 1 %>
+      <%= "Your search returned no results, please check your spelling you kook" %>
+    <% else %>
+      <% @bicycles.each do |bicycle| %>
+        <div class="card-category rounded">
           <img class ="card-img-top" src="<%= bicycle.photo %>">
-        </a>
-        <div class="card-body">
-          <h5 class="card-title"><%= "#{bicycle.brand}" %>
-            <small> - <%= "#{bicycle.category}" %> Bike</small></%>
-          </h5>
-          <div class="card-text">
-            <p><%= "#{bicycle.description}" %></p>
-            <p><%= "Address: #{bicycle.address}" %></p>
-            <p><%= "$#{bicycle.price_per_day}/day" %></p>
-            <%= link_to 'Book', bicycle_path(bicycle) %>
+          <div class="card-body">
+            <h5 class="card-title"><%= "#{bicycle.brand}" %>
+              <small> - <%= "#{bicycle.category}" %> Bike</small></%>
+            </h5>
+            <div class="card-text">
+              <p><%= "#{bicycle.description}" %></p>
+              <p><%= "Address: #{bicycle.address}" %></p>
+              <p><%= "$#{bicycle.price_per_day}/day" %></p>
+              <%= link_to 'Book', bicycle_path(bicycle) %>
+            </div>
           </div>
         </div>
-      </div>
-  <% end %>
+      <% end %>
+    <% end %>
   </div>
 </div>
 
 <%#= link_to 'Home', root_path  %>
 <%#= cl_image_tag(bicycle.photo) %>
+
