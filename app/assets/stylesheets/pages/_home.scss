@@ -26,6 +26,9 @@ transform: translate(-50%, -50%);
 
 }
 
+.title {
+  padding-bottom: 60px;
+}
 .h1{
     font-size: 400px;
 }
@@ -62,29 +65,6 @@ transform: translate(-50%, -50%);
   section{
     text-align: center;
   }
-  .blockquote p{
-    font-size: 32px;
-    line-height: 45px;
-    padding-left: 30px;
-    border-left: 3px solid #424242;
-    color: #424242;
-  }
-
-  .title{
-    position: relative;
-    margin-bottom: 100px;
-  }
-  .title:after{
-    content: '';
-    height: 5px;
-    width: 40px;
-    background-color: #62aa94;
-    position: absolute;
-    top: 81px;
-    left: calc(50% - 20px);
-  }
-
-/*Bootstrap*/
 
 .form-control{
   border-radius: 0;
@@ -95,17 +75,17 @@ transform: translate(-50%, -50%);
   border-color: #51c2b9;
 }
 
-
-
 .bg-img{
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
 }
+
 .bg-img div{
   z-index: 1;
   position: relative;
 }
+
 .bg-img:after{
   position: absolute;
   content: '';
@@ -120,46 +100,34 @@ transform: translate(-50%, -50%);
   padding: 100px 0;
 }
 
-.graphic-design{
-  background:transparent url(../images/graphic-design.png) no-repeat;
+.rent-bike {
     width: 120px;
     height: 120px;
   display:block;
-}
-.webdevelopment{
-  background:transparent url(../images/webdevelopment.png) no-repeat;
-    width: 120px;
-    height: 120px;
-  display:block;
-}
-.community{
-  image: url(../images/CTlogo) no-repeat;
-    width: 120px;
-    height: 120px;
-  display:block;
-}
-.play-icon{
-  background:transparent url(../images/video-play-icon.png) no-repeat;
-    width: 70px;
-    height: 69px;
-  display:block;
+  i {
+    font-size: 100px;
+    color: #03CDAE;
+  }
 }
 
-/*Button*/
-.home-btn{
-  border-color: #51c2b9;
-  font-style: italic;
-  color: #51c2b9;
-  border-radius: 0;
-  letter-spacing: 3px;
-  padding: 15px 80px;
-  margin-bottom: 30px;
-  background-color: transparent;
-  transition: all 0.3s ease-in-out;
+.loan-bike{
+  width: 120px;
+  height: 120px;
+  display:block;
+  i {
+    font-size: 100px;
+     color: #03CDAE;
+  }
 }
-.home-btn:hover{
-  background-color: #51c2b9;
-  color: #fff;
+
+.community{
+  width: 120px;
+  height: 120px;
+  display:block;
+  i {
+    font-size: 100px;
+     color: #03CDAE;
+  }
 }
 
 .header{
@@ -205,18 +173,6 @@ transform: translate(-50%, -50%);
   color: #424242;
 }
 
-.about{
-  background-color: #f8f8f8;
-}
-.about img{
-  margin: 30px auto;
-  display: block;
-}
-.about span{
-  font-family: 'Raleway';
-  font-weight: 600;
-}
-
 .expert{
   background-color: #f8f8f8;
 }
@@ -236,91 +192,6 @@ transform: translate(-50%, -50%);
 .expert .section{
   padding-left: 30px;
   padding-right: 30px;
-}
-
-
-.home-quote{
-  background-image: url(../images/3.jpg);
-  /*padding: 120px 0;*/
-  color: #fff;
-  font-style: italic;
-}
-.home-quote p{
-  font-size: 32px;
-  color: #fff;
-}
-.home-quote .quote{
-  margin-bottom: 40px;
-}
-.home-quote .author{
-  font-size: 21px;
-  margin-bottom: 40px;
-}
-
-.subscribe{
-  background-image: url(../images/11.jpg);
-}
-.subscribe .home-btn{
-  margin-bottom: 0;
-  color: #424242;
-  font-weight: 700;
-  border-color: #fff;
-  background-color: #fff;
-}
-.subscribe .home-btn:hover{
-  background-color: transparent;
-  color: #fff;
-}
-.subscribe p{
-  color: #fff;
-  font-size: 32px;
-  margin-bottom: 35px;
-}
-.subscribe .form-control{
-    width: 320px;
-    margin-bottom: 0;
-    border-color: #fff;
-    color: #fff;
-}
-
-.contact .home-card{
-  background-color: #f8f8f8;
-  padding: 35px 0;
-  transition: all 0.3s ease-in-out;
-  margin-bottom: 45px;
-}
-
-
-.contact .home-card .home-card-header{
-  margin-bottom: 15px;
-  font-size: 21px;
-  color: #51c2b9;
-}
-.contact .home-card .home-card-content h3{
-  letter-spacing: 2px;
-  margin-bottom: 45px;
-}
-.contact .home-card .home-card-content h3:after{
-  top: 40px;
-}
-.contact .home-card .home-card-content p{
-  font-size: 18px;
-}
-.footer{
-  background-color: #202020;
-  text-align: center;
-  padding: 60px 0;
-}
-.footer span{
-  color: #51c2b9;
-}
-.footer p{
-  font-size: 21px;
-  color: #fff;
-  margin-bottom: 0;
-}
-.footer a{
-  color: #fff;
 }
 
 

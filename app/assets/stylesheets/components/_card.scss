@@ -54,21 +54,44 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-/*ubutia Card*/
-.ubutia-card{
+/*home Card*/
+.home-card{
   text-align: center;
   /*margin-bottom: 45px;*/
 }
-.ubutia-card .ubutia-card-header{
+.home-card .home-card-header{
   margin-bottom: 45px;
 }
-.ubutia-card .ubutia-card-header .card-icon{
+.home-card .home-card-header .card-icon{
   border-radius: 100%;
   display: inline-block;
   height: 120px;
   width: 120px;
   line-height: 120px;
   position: relative;
+}
+
+.contact .home-card{
+  background-color: #f8f8f8;
+  padding: 35px 0;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 45px;
+}
+
+.contact .home-card .home-card-header{
+  margin-bottom: 15px;
+  font-size: 21px;
+  color: #51c2b9;
+}
+.contact .home-card .home-card-content h3{
+  letter-spacing: 2px;
+  margin-bottom: 45px;
+}
+.contact .home-card .home-card-content h3:after{
+  top: 40px;
+}
+.contact .home-card .home-card-content p{
+  font-size: 18px;
 }
 
 // Smallest device
