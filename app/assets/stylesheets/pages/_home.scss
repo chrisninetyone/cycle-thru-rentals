@@ -1,10 +1,8 @@
 // Specific CSS for your home-page
+
+
 .search {
 z-index: 2;
-}
-
-.btn-outline-warning{
-
 }
 
 .carousel-item {
@@ -22,7 +20,22 @@ z-index: 2;
   background-color: blue;
 }
 
+.company-name{
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
 
+.carousel-caption{
+  padding: 600px
+
+}
+
+.h1{
+    font-size: 400px
+}
 
 
 
