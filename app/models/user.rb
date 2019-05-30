@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :bicycles
+
+  mount_uploader :avatar, PhotoUploader
 end
