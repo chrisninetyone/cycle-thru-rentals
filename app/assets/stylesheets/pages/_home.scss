@@ -143,7 +143,11 @@ transform: translate(-50%, -50%);
   display: table;
   text-align: center;
   width: 100%;
+  #algolia-places-listbox-0 {
+    text-align: left;
+  }
 }
+
 
 .intro{
   display: table-cell;
