@@ -1,7 +1,7 @@
 .map-title {
   text-align: center;
   // padding-bottom: 20px;
-  // padding-top: 20px;
+  padding-top: 20px;
 }
 
 .wrapper
@@ -26,4 +26,8 @@
   width: 90%;
   height: 1px;
   background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+#map {
+  margin-bottom: 50px;
 }
