@@ -77,7 +77,6 @@ transform: translate(-50%, -50%);
   }
 }
 
-
 .bg-img{
   background-size: cover;
   background-repeat: no-repeat;
@@ -121,6 +120,12 @@ transform: translate(-50%, -50%);
     font-size: 100px;
      color: #03CDAE;
   }
+}
+
+.logo {
+  width: 90px;
+  height: 60px;
+
 }
 
 .community{
@@ -168,7 +173,7 @@ transform: translate(-50%, -50%);
   letter-spacing: 2px;
 }
 .header p{
-  font-size: 32px;
+  font-size: 25px;
   padding-top: 0;
   padding-bottom: 40px;
 }
