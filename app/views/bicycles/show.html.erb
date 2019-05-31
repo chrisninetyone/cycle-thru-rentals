@@ -33,11 +33,11 @@
 
 </div>
 
-<% if @reviews.exists? %>
+<% if @bicycle.reviews.exists? %>
   <div class="container w-50 bg-white my-3 p-3">
     <h1>Reviews</h1>
     <div class="cards">
-      <% @reviews.each do |review| %>
+      <% @bicycle.reviews.each do |review| %>
         <div class="reviews">
           <div class="d-flex">
             <div class="mr-2 mt-2">
