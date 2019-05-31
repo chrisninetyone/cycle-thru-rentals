@@ -13,7 +13,9 @@
   <div class="row">
     <div class="cards">
       <% if @bicycles.length < 1 %>
-        <%= "Your search returned no results" %>
+        <div class="container">
+          <%= "Your search returned no results" %>
+        </div>
       <% else %>
         <% @bicycles.each do |bicycle| %>
           <div class="card-category rounded">
