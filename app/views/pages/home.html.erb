@@ -7,18 +7,16 @@
             <h1>Cycle Thru</h1>
             <p>Let's ride</p>
             <div class="search-form">
-              <div>
                 <div class="p-3 rounded">
                   <%= form_tag bicycles_path, method: :get do %>
                   <%= text_field_tag :query,
                     params[:query],
                     class: "form-control",
-                    placeholder: "Enter a location"
+                    placeholder: "Enter a location..."
                     %>
                   <%#= submit_tag("Search", class: 'btn btn-primary') %>
                   <% end %>
                 </div>
-              </div>
             </div>
           </div>
         </div>
@@ -96,7 +94,7 @@
             <div class="home-card-content">
                 <h3>Address</h3>
                 <p>
-                    Frii Hotel, Canggu, Bali
+                  Frii Hotel, Canggu, Bali
                 </p>
             </div>
           </div>
@@ -109,7 +107,7 @@
             <div class="home-card-content">
               <h3>Phone</h3>
               <p>
-                  +62 813 211 3747
+                +62 813 211 3747
               </p>
             </div>
           </div>
@@ -122,7 +120,7 @@
               <div class="home-card-content">
                 <h3>Email</h3>
                 <p>
-                    info@cyclethru.com
+                  info@cyclethru.com
                 </p>
               </div>
           </div>

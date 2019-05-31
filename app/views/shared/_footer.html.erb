@@ -13,20 +13,20 @@
         <h6 class="text-uppercase font-weight-bold">Products</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p style="font-size: 17px">
-           <a><%= link_to "Cycle Thru", class: "btn btn-link" %></a>
+           <a><%= link_to "Cycle Thru", root_path, class: "footer-selector" %></a>
         </p>
       </div>
       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
         <h6 class="text-uppercase font-weight-bold">Check us out!</h6>
         <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
         <p style="font-size: 17px">
-          <a><%= link_to "Login", new_user_session_path %></a>
+          <a><%= link_to "Login", new_user_session_path, class: "footer-selector" %></a>
         </p>
         <p style="font-size: 17px">
-          <a><%= link_to "Rent a bike", bicycles_path %></a>
+          <a><%= link_to "Rent a bike", bicycles_path, class: "footer-selector" %></a>
         </p>
         <p style="font-size: 17px">
-          <a> <%= link_to "Post a bike", new_bicycle_path %></a>
+          <a> <%= link_to "Post a bike", new_bicycle_path, class: "footer-selector" %></a>
         </p>
       </div>
       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
@@ -44,21 +44,11 @@
     <div class="container">
       <div class="row py-4 d-flex align-items-center">
         <div class="col-md-6 col-lg-7 text-center text-md-right icons">
-           <a href="#">
-            <i class="fab fa-facebook-f white-text mr-4 footer-icon"></i>
-          </a>
-           <a href="#">
-            <i class="fab fa-twitter white-text mr-4 footer-icon"></i>
-          </a>
-           <a href="#">
-            <i class="fab fa-google-plus-g white-text mr-4 footer-icon"></i>
-          </a>
-           <a href="#">
-            <i class="fab fa-linkedin-in white-text mr-4 footer-icon"></i>
-          </a>
-          <a href="#">
-             <i class="fab fa-instagram white-text footer-icon"></i>
-          </a>
+           <a href="#"><i class="fab fa-facebook-f white-text mr-4 footer-icon"></i></a>
+           <a href="#"><i class="fab fa-twitter white-text mr-4 footer-icon"></i></a>
+           <a href="#"><i class="fab fa-google-plus-g white-text mr-4 footer-icon"></i></a>
+           <a href="#"><i class="fab fa-linkedin-in white-text mr-4 footer-icon"></i></a>
+          <a href="#"><i class="fab fa-instagram white-text footer-icon"></i></a>
         </div>
       </div>
     </div>
