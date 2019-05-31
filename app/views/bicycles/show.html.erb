@@ -34,20 +34,37 @@
 </div>
 
 <% if @reviews.exists? %>
-  <div class="container bg-white my-3 p-3">
+  <div class="container w-50 bg-white my-3 p-3">
     <h1>Reviews</h1>
-    <% @reviews.each do |review| %>
-    <div>
-      <% review.rating.to_i.times do %>
-        <i class="fas fa-star"></i>
-      <% end %>
-      <% (5 - review.rating.to_i).times do %>
-        <i class="far fa-star"></i>
+    <div class="cards">
+      <% @reviews.each do |review| %>
+        <div class="reviews">
+          <div class="d-flex">
+            <div class="mr-2 mt-2">
+              <%= cl_image_tag review.booking.user.avatar, class: "avatar" %>
+            </div>
+            <div class="mb-2">
+              <div><%= review.booking.user.name %></div>
+              <div><%= (DateTime.now - review.booking.end_date).to_i %> days ago</div>
+
+            </div>
+          </div>
+          <div>
+            <div>
+              <% review.rating.to_i.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+              <% (5 - review.rating.to_i).times do %>
+                <i class="far fa-star"></i>
+              <% end %>
+            </div>
+            <div>
+              "<%= review.content %>"
+            </div>
+          </div>
+        </div>
       <% end %>
 
-
-      <%= review.content %>
     </div>
-    <% end %>
   </div>
 <% end %>
