@@ -1,18 +1,19 @@
-<div class="container bg-white w-50 my-3 p-2">
 
-  <h1 class="text-center">Post your Bicycle</h1>
   <%= simple_form_for [@bicycle] do |f| %>
-
-    <%= f.input :photo %>
+<div class = "grey-text font-weight-light">
+  <h1>Post your Bicycle</h1>
+    <%= f.input :photo, class: "btn-outline-secondary" %>
     <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :brand %>
     <%= f.input :category, collection: ['Road', 'Mountain', 'Touring', 'Fixie', 'Commuter', 'BMX'] %>
     <%= f.input :price_per_day %>
     <%= f.input :address %>
     <%= f.input :description %>
-    <%= f.submit "Post Bike", class: "btn btn-primary" %>
+    <%= f.submit "Post Bike", class: "btn-outline-secondary" %>
   <% end %>
 </div>
-
+</div>
+</div>
+</div>
 <%= link_to 'Home', root_path %>
 
