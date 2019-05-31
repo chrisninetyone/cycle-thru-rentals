@@ -1,14 +1,14 @@
 <div class="container">
-  <div class="confirmation-card">
-
-  <h2>You're all set!</h1>
-  <h3>You've booked a <%= @booking.bicycle.brand %> <%= @booking.bicycle.category %> for
-    <%= (@booking.end_date - @booking.begin_date).to_i %> days</h3>
-  <p>You have confirmed reservation with </p>
-
-  </div>
-
+  <div class="booking-main">
+    <div class="mt-4">
+      <h2>You're all set!</h1>
+      <h3>You've booked a <%= @booking.bicycle.brand %> <%= @booking.bicycle.category %> for
+        <%= (@booking.end_date - @booking.begin_date).to_i %> days</h3>
+      <h5>Total Price: $<%= ((@booking.end_date - @booking.begin_date).to_i)*@booking.bicycle.price_per_day %><h5>
+      <img class="booking-photo" src="<%= @booking.bicycle.photo %>">
+    </div>
   </div>
 </div>
+
 
 

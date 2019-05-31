@@ -11,10 +11,23 @@
   grid-gap: 16px;
   margin-bottom: 20px;
   height: auto;
-  overflow-y: scroll;
+  // overflow-y: scroll;
     a:hover {
       text-decoration: none;
     }
+}
+
+.display-address {
+  font-size: 12px;
+}
+
+.booking-main {
+  height: 80vh;
+}
+
+.booking-photo {
+  height: 240px;
+  width: 240px
 }
 
 .signin-card {
