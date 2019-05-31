@@ -61,12 +61,16 @@ transform: translate(-50%, -50%);
     text-align: center;
   }
 
+.form-control:focus {
+  color: #51c2b9;
+}
+
 .form-control{
   border-radius: 0;
   font-size: 18px;
   font-style: italic;
   background-color: transparent;
-  color: #424242;
+  color: #51c2b9;
   border-color: #51c2b9;
   &:focus {
     background-color: transparent;
@@ -144,6 +148,7 @@ transform: translate(-50%, -50%);
   width: 100%;
   #algolia-places-listbox-0 {
     text-align: left;
+    color: black;
   }
 }
 
