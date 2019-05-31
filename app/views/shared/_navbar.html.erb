@@ -14,7 +14,6 @@
         <li class="nav-item active">
           <%= link_to "Post a bike", new_bicycle_path, class: "btn btn-link" %>
         </li>
-
       <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <%= cl_image_tag current_user.avatar, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
@@ -24,7 +23,6 @@
           </div>
         </li>
         <% else %>
-
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "btn btn-info" %>
         </li>
