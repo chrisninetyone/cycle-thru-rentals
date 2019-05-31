@@ -10,8 +10,7 @@ class BookingsController < ApplicationController
     @booking.bicycle = Bicycle.find(params[:bicycle_id])
     authorize @booking
     @booking.user = current_user
-    if check_user?
-      @booking.save
+    if check_user? && @booking.save
       redirect_to @booking
     else
       render 'bicycles/show'
